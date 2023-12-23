@@ -1,0 +1,53 @@
+---
+const data = {
+  duties: [
+    "Javascript, Python, Java, Typescript, Golang",
+    "HTML/CSS, React, Vue.js, Next.js",
+    "Django, Node.js, Express.js, Gin",
+    "PostgreSQL, Firebase, MongoDB",
+    "Linux, Git, Graphql, RESTful API, Docker",
+  ],
+};
+
+const { duties } = data;
+---
+
+<div class="mt-32">
+  <div class="flex justify-center">
+    <h2 class="text-4xl md:text-6xl">
+      About <span class="text-teal-500">me.</span>
+    </h2>
+  </div>
+  <div class="flex justify-center mt-2">
+    <div class="flex-col justify-center p-10">
+      <div class="flex justify-center">
+        <button
+          class="mx-7 pb-2 text-2xl md:text-xl focus:outline-none border-b-4 border-pink-300"
+        >
+          Skills
+        </button>
+      </div>
+      <div class="mt-9">
+        {
+          duties.map(duty => (
+            <div class="flex pt-3 text-sm md:text-lg">
+              <span class="text-green-300 text-lg md:text-2xl">•</span>
+              <p class="pl-3">{duty}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-center mb-10">
+    <div class="flex-col justify-center">
+      <div class="flex justify-center">
+        <button
+          class="mx-7 text-2xl md:text-xl focus:outline-none border-b-4 border-pink-300"
+        >
+          Experience
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
