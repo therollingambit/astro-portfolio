@@ -1,0 +1,46 @@
+---
+import { type CollectionEntry } from "astro:content";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Image } from "astro:assets";
+import { Github, ExternalLink } from "lucide-react";
+
+const { project } = Astro.props;
+
+interface Props {
+  project: CollectionEntry<"projects">;
+}
+---
+
+<Card>
+  <CardHeader>
+    <Image
+      src={project.data.cover}
+      alt={project.data.title}
+      class="object-cover h-48"
+    />
+  </CardHeader>
+  <CardContent>
+    <div class="flex-col justify-between">
+      <CardTitle>{project.data.title}</CardTitle>
+      <div class="pb-4 pt-3">
+        {project.data.tags.map((t) => <Badge className="mx-3">{t}</Badge>)}
+      </div>
+      <p>{project.data.summary}</p>
+    </div>
+  </CardContent>
+  <CardFooter className="flex justify-evenly">
+    <a href={project.data.demo} target="_blank">
+      <ExternalLink />
+    </a>
+    <a href={project.data.github} target="_blank">
+      <Github />
+    </a>
+  </CardFooter>
+</Card>

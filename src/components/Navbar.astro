@@ -1,5 +1,5 @@
 ---
-import { ModeToggle } from "./ModeToggle";
+import Mode from './Mode.astro'
 const as = [
     { id: 1, url: "/", text: "Home" },
     { id: 2, url: "/projects", text: "Projects" },
@@ -20,7 +20,7 @@ const as = [
   <ul
     class="md:flex text-center md:visible"
   >
-    <li class="md:px-5 cursor-pointer"><ModeToggle client:load /></li>
+    <li class="md:px-5 cursor-pointer"><Mode /></li>
     {as.map(l => {
       const { url, text } = l;
       return (

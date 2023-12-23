@@ -1,0 +1,31 @@
+---
+import Svg from "../home/Svg.astro";
+import { Mail, Linkedin } from 'lucide-react';
+import { fade } from 'astro:transitions';
+---
+
+<div transition:animate={fade({ duration: '0.95s' })}>
+  <div class="flex justify-center">
+    <h2 class="text-4xl md:text-5xl mt-14">
+      Get in <span class="text-teal-500">touch</span>.
+    </h2>
+  </div>
+
+  <div class="flex-col mt-10 mb-52">
+    <div class="flex p-3 text-lg md:text-2xl justify-center items-center space-x-4">
+      <Mail />
+      <a href="mailto: ahmadenaya29@gmail.com" target="_blank">
+        <h2 class="hover:text-teal-500">ahmadenaya29@gmail.com</h2>
+      </a>
+    </div>
+
+    <div class="flex p-3 text-lg md:text-2xl justify-center items-center space-x-4">
+      <Linkedin />
+      <a href="https://www.linkedin.com/in/ahmad-enayathullah-14aa7b152/" target="_blank">
+        <h2 class="hover:text-teal-500">Ahmad Enayathullah</h2>
+      </a>
+    </div>
+
+    <Svg />
+  </div>
+</div>

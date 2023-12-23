@@ -1,0 +1,14 @@
+---
+const { skill } = Astro.props;
+
+interface Props {
+  skill: string;
+}
+---
+
+<div class="flex pt-3 text-sm md:text-lg">
+  <p>
+    <span class="text-teal-500 text-lg md:text-2xl mr-2"> &#x2022;</span>
+    {skill}
+  </p>
+</div>

@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import AstroLogo from '@/icons/astro-logo.astro'
+import Django from '@/icons/django.astro'
+import Fastapi from '@/icons/fastapi.astro'
+import Golang from '@/icons/golang.astro'
+import JsLogo from '@/icons/js-logo.astro'
+import NextLogo from '@/icons/nextjs.astro'
+import Pandas from '@/icons/pandas.astro'
+import Postgres from '@/icons/postgres.astro'
+import PythonLogo from '@/icons/python.astro'
+import ReactLogo from '@/icons/react.astro'
+import TsLogo from '@/icons/ts-logo.astro'
+import me from "../../images/me.jpg";
+import { Button } from "../ui/button";
+import Wave from "@/components/home/Wave.astro";
+import { fade } from 'astro:transitions';
+---
+
+<div class="p-7 sm:grid md:flex justify-center items-center">
+  <div class="pt-8 md:pr-7 text-center md:text-left">
+    <div>
+      <div>
+        <h2 class="text-4xl md:text-6xl pb-3" transition:animate={fade({ duration: '0.95s' })}>
+          Code is <span class="text-teal-500">art</span>.
+        </h2>
+      </div>
+
+      <div>
+        <h2 class="text-4xl md:text-6xl" transition:animate={fade({ duration: '0.95s' })}>That does magic</h2>
+      </div>
+    </div>
+
+    <p class="text-xl md:text-2xl pt-5" transition:animate={fade({ duration: '1.2s' })}>Always striving to write clean code.</p>
+    <p class="text-xl md:text-2xl md:pt-2" transition:animate={fade({ duration: '1.2s' })}>And I love what I do.</p>
+    <a href="/contact" transition:animate={fade({ duration: '1.2s' })}> <Button className="mt-5 rounded py-2 px-3 text-lg font-bold cursor-pointer tracking-wider">Contact me</Button></a>
+  </div>
+
+  <div class="md:pl-4 pt-12 text-center">
+    <div transition:animate={fade({ duration: '0.95s' })}>
+      <Image src={me} width={400} height={500} alt="picture of enaya" />
+    </div>
+    <Wave />
+  </div>
+</div>
+<div>
+  <div class="flex mt-36 justify-around">
+    <!-- icons -->
+    <PythonLogo />
+    <JsLogo />
+    <TsLogo />
+    <Golang />
+    <ReactLogo />
+    <AstroLogo />
+    <NextLogo />
+    <Django />
+    <Fastapi />
+    <Pandas />
+    <Postgres />
+  </div>
+</div>

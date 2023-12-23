@@ -1,0 +1,44 @@
+---
+import ProjectCard from "@/components/projects/ProjectCard.astro";
+import { Button } from "@/components/ui/button";
+import MainLayout from "@/layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+const allProjects: CollectionEntry<"projects">[] =
+  await getCollection("projects");
+const categories = ["Fullstack", "Frontend", "Backend"];
+---
+
+<MainLayout title="Ahmad Enaya | Projects">
+  <div class="mb-16" transition:animate="none">
+    <div class="flex-col text-center md:px-10">
+      <div class="p-12">
+        <h2 class="text-4xl md:text-5xl">
+          My <span class="text-teal-500">pr</span><span
+            class="border-b-4 text-teal-500 border-gray-300">ojec</span
+          ><span class="text-teal-500">ts</span>
+        </h2>
+      </div>
+
+      <div class="mb-9 text-lg md:text-2xl flex justify-center">
+        {
+          categories.map((category) => (
+            <p class="mx-3 p-1 px-4 focus:outline-none rounded hover:text-teal-500">
+              <a href={`/projects/${category.toLowerCase()}`}>{category}</a>
+            </p>
+          ))
+        }
+      </div>
+
+      <!--list of projects -->
+      <div
+        class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        transition:name="myprojects"
+        transition:animate="slide"
+      >
+        {allProjects.map((p) => <ProjectCard project={p} />)}
+      </div>
+    </div>
+  </div>
+</MainLayout>

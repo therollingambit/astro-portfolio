@@ -1,0 +1,40 @@
+---
+import Jobs from "./Jobs.astro";
+
+const experiences = {
+  rio: {
+    title: "Backend Engineer",
+    company: "Rio Tinto",
+    period: "Jul 2021 - present",
+    desc: [
+      "Involved in backend development of Rio's",
+      "Commodity Trading Risk Management (CTRM) platform",
+      "as well as Marine Cape's P&L and exposure engine.",
+      "Tech stack: Django, FastAPI, Pandas, Python, AWS, Airflow, Docker.",
+    ],
+  },
+  amigoals: {
+    title: "Frontend developer (freelance)",
+    company: "Amigoals",
+    period: "Jul 2021 - Jul 2022",
+    desc: [
+      "Amigoals is a mentorship platform for tech professionals.",
+      "Implemented the wishlist feature, refactored codebase",
+      "to use React's Context API to manage global states,",
+      "restructured frontend folders to follow best practices.",
+    ],
+  },
+};
+
+const { rio, amigoals } = experiences;
+---
+
+<div class="mt-5">
+  <div class="pt-3">
+    <Jobs job={rio} />
+  </div>
+
+  <div class="mt-7">
+    <Jobs job={amigoals} />
+  </div>
+</div>

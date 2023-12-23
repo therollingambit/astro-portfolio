@@ -1,0 +1,52 @@
+---
+import Experience from "../home/Experience.astro";
+import Skills from "../home/Skills.astro";
+const data = {
+  lang: ["Python, Javascript, Typescript, Golang, Java"],
+  frontend: ["HTML/CSS, React, Next.js, React, Astro"],
+  backend: ["Django, Fastapi, Node.js, Express.js"],
+  db: ["PostgreSQL, Firebase, MongoDB"],
+  others: ["Linux, Git, Graphql, RESTful API, Docker"],
+};
+
+const { lang, frontend, backend, db, others } = data;
+---
+
+<div class="mt-24">
+  <div class="flex justify-center">
+    <h2 class="text-4xl md:text-6xl">
+      About <span class="text-teal-500">me.</span>
+    </h2>
+  </div>
+  <div class="flex justify-center mt-2">
+    <div class="flex-col justify-center p-10">
+      <div class="flex justify-center">
+        <button
+          class="mx-7 pb-2 text-2xl focus:outline-none border-b-4 border-fuchsia-800"
+        >
+          Skills
+        </button>
+      </div>
+      <div class="mt-5">
+        {lang.map((l) => <Skills skill={l} />)}
+        {frontend.map((l) => <Skills skill={l} />)}
+        {backend.map((l) => <Skills skill={l} />)}
+        {db.map((l) => <Skills skill={l} />)}
+        {others.map((l) => <Skills skill={l} />)}
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-center mb-10">
+    <div class="flex-col justify-center">
+      <div class="flex justify-center">
+        <button
+          class="mx-7 text-2xl focus:outline-none border-b-4 border-fuchsia-800"
+        >
+          Experience
+        </button>
+      </div>
+
+      <Experience />
+    </div>
+  </div>
+</div>
