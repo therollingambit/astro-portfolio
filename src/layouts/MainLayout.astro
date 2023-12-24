@@ -4,10 +4,14 @@ import Footer from "@/components/Footer.astro";
 import Navbar from "@/components/Navbar.astro";
 import "@/styles/globals.css";
 
-const { title = "Ahmad Enaya | Home" } = Astro.props;
+const {
+  title = "Ahmad Enaya | Home",
+  desc = "My portfolio website built with Astro"
+} = Astro.props;
 
 interface Props {
   title?: string;
+  desc?: string;
 }
 ---
 
@@ -18,14 +22,14 @@ interface Props {
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="description" content={desc} />
     <ViewTransitions />
   </head>
   <body>
-
-			<Navbar />
-			<section class="container mx-auto max-w-screen-xl mt-10 px-8">
-				<slot />
-			</section>
-			<Footer />
+    <Navbar />
+    <section class="container mx-auto max-w-screen-xl mt-10 px-8">
+      <slot />
+    </section>
+    <Footer />
   </body>
 </html>

@@ -14,13 +14,13 @@ interface Props {
 ---
 
 <div class="space-y-1">
-  <h4 class="text-sm md:text-lg font-medium leading-none">
+  <p class="text-sm md:text-lg font-medium leading-none">
     {job.title}
-  </h4>
+  </p>
   <p class="text-sm md:text-lg text-muted-foreground">{job.company}</p>
 </div>
 <Separator className="my-4" />
-<div class="flex pt-2 h-24 items-center space-x-4 text-sm">
+<div class="flex h-24 items-center space-x-4 text-sm">
   <div>{job.period}</div>
   <Separator orientation="vertical" />
   <div>
