@@ -8,12 +8,12 @@ import { fade } from "astro:transitions";
 ---
 
 <div class="p-7 sm:grid md:flex justify-center items-center">
-  <div class="pt-8 md:pr-7 text-center md:text-left">
+  <div class="lg:pt-8 lg:pr-7 text-center lg:text-left">
     <div>
       <div>
         <h2
           class="text-4xl md:text-6xl pb-3"
-          transition:animate={fade({ duration: "0.95s" })}
+          transition:animate={fade({ duration: "0.75s" })}
         >
           Code is <span class="text-teal-500">art</span>.
         </h2>
@@ -22,7 +22,7 @@ import { fade } from "astro:transitions";
       <div>
         <h2
           class="text-4xl md:text-6xl"
-          transition:animate={fade({ duration: "0.95s" })}
+          transition:animate={fade({ duration: "0.75s" })}
         >
           That does magic
         </h2>
@@ -31,17 +31,17 @@ import { fade } from "astro:transitions";
 
     <p
       class="text-xl md:text-2xl pt-5"
-      transition:animate={fade({ duration: "1.2s" })}
+      transition:animate={fade({ duration: "0.75s" })}
     >
       Always striving to write clean code.
     </p>
     <p
       class="text-xl md:text-2xl md:pt-2"
-      transition:animate={fade({ duration: "1.2s" })}
+      transition:animate={fade({ duration: "0.75s" })}
     >
       And I love what I do.
     </p>
-    <a href="/contact" transition:animate={fade({ duration: "1.2s" })}>
+    <a href="/contact" transition:animate={fade({ duration: "0.75s" })}>
       <Button
         className="mt-5 rounded py-2 px-3 text-lg font-bold cursor-pointer tracking-wider"
       >
@@ -51,25 +51,25 @@ import { fade } from "astro:transitions";
   </div>
 
   <div class="md:pl-4 pt-12 text-center">
-    <div transition:animate={fade({ duration: "0.95s" })}>
+    <div transition:animate="none">
       <Image src={me} width={400} height={500} alt="picture of enaya" />
     </div>
     <Wave />
   </div>
 </div>
 <div>
-  <div class="flex mt-36 justify-around">
+  <div class="flex mt-20 lg:mt-36 justify-around">
     <!-- icons -->
-    <Icon class="h-8 w-20" name="simple-icons:python" />
-    <Icon class="h-8 w-20" name="mdi:language-javascript" />
-    <Icon class="h-8 w-20" name="mdi:language-typescript" />
-    <Icon class="h-8 w-20" name="file-icons:go-old" />
-    <Icon class="h-8 w-20" name="mdi:react" />
-    <Icon class="h-8 w-20" name="simple-icons:astro" />
-    <Icon class="h-8 w-20" name="file-icons:nextjs" />
-    <Icon class="h-8 w-20" name="simple-icons:django" />
-    <Icon class="h-8 w-20" name="simple-icons:fastapi" />
-    <Icon class="h-8 w-20" name="simple-icons:pandas" />
-    <Icon class="h-8 w-20" name="simple-icons:postgresql" />
+    <Icon class="h-6 w-7 lg:h-8 lg:w-20" name="simple-icons:python" />
+    <Icon class="h-6 w-7 lg:h-8 lg:w-20" name="mdi:language-javascript" />
+    <Icon class="h-6 w-7 lg:h-8 lg:w-20" name="mdi:language-typescript" />
+    <Icon class="h-6 w-7 lg:h-8 lg:w-20" name="file-icons:go-old" />
+    <Icon class="h-6 w-7 lg:h-8 lg:w-20" name="mdi:react" />
+    <Icon class="h-6 w-7 lg:h-8 lg:w-20" name="simple-icons:astro" />
+    <Icon class="h-6 w-7 lg:h-8 lg:w-20" name="file-icons:nextjs" />
+    <Icon class="h-6 w-7 lg:h-8 lg:w-20" name="simple-icons:django" />
+    <Icon class="h-6 w-7 lg:h-8 lg:w-20" name="simple-icons:fastapi" />
+    <Icon class="h-6 w-7 lg:h-8 lg:w-20" name="simple-icons:pandas" />
+    <Icon class="h-6 w-7 lg:h-8 lg:w-20" name="simple-icons:postgresql" />
   </div>
 </div>

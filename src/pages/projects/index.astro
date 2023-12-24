@@ -23,7 +23,7 @@ const categories = ["Fullstack", "Frontend", "Backend"];
       <div class="mb-9 text-lg md:text-2xl flex justify-center">
         {
           categories.map((category) => (
-            <p class="mx-3 p-1 px-4 focus:outline-none rounded hover:text-teal-500">
+            <p class="lg:mx-3 p-1 px-4 focus:outline-none rounded hover:text-teal-500">
               <a href={`/projects/${category.toLowerCase()}`}>{category}</a>
             </p>
           ))

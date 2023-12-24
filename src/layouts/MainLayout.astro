@@ -1,8 +1,8 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import Footer from "@/components/Footer.astro";
-import Navbar from "@/components/Navbar.astro";
 import "@/styles/globals.css";
+import NewNavbar from "@/components/NewNavbar.astro";
 
 const {
   title = "Ahmad Enaya | Home",
@@ -26,7 +26,7 @@ interface Props {
     <ViewTransitions />
   </head>
   <body>
-    <Navbar />
+    <NewNavbar />
     <section class="container mx-auto max-w-screen-xl mt-10 px-8">
       <slot />
     </section>

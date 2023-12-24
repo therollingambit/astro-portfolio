@@ -17,7 +17,7 @@ const categories = ["All", "Fullstack", "Frontend", "Backend"];
 ---
 
 <MainLayout title={`Projects | ${category}`} desc={`${category} projects by Enaya`}>
-  <div class="mb-16">
+  <div class="mb-16 items-center justify-center text-center">
     <div class="flex-col text-center md:px-10">
       <div class="p-12">
         <h2 class="text-4xl md:text-5xl">
@@ -33,8 +33,8 @@ const categories = ["All", "Fullstack", "Frontend", "Backend"];
             <p
               class={
                 c === category
-                  ? "mx-3 p-1 px-4 focus:outline-none rounded text-teal-500"
-                  : "mx-3 p-1 px-4 focus:outline-none rounded hover:text-teal-500"
+                  ? "lg:mx-3 p-1 px-2 lg:px-4 focus:outline-none rounded text-teal-500"
+                  : "lg:mx-3 p-1 px-2 lg:px-4 focus:outline-none rounded hover:text-teal-500"
               }
             >
               {c !== "All" ? (

@@ -1,0 +1,33 @@
+---
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import ThemeIcon from "./ThemeIcon.astro";
+---
+
+<header class="lg:flex p-8 justify-between items-center">
+  <Astronav>
+    <div class="flex w-full justify-between items-center">
+      <h1 class="logo font-mono text-2xl md:text-3xl">
+        <a href="/">Ahmad Enaya</a>
+      </h1>
+      <div class="block lg:hidden">
+        <MenuIcon class="w-5 h-5 text-foreground" />
+      </div>
+    </div>
+    <MenuItems class="hidden lg:flex">
+      <ul class="flex flex-col items-center text-center pt-7 lg:pt-0 lg:flex-row">
+        <li class="lg:px-5 lg:pt-1.5">
+          <ThemeIcon />
+        </li>
+        <li class="md:px-5 pt-8 lg:pt-0 cursor-pointer text-xl">
+          <a href="/">Home</a>
+        </li>
+        <li class="md:px-5 pt-8 lg:pt-0 cursor-pointer text-xl">
+          <a href="/projects">Projects</a>
+        </li>
+        <li class="md:px-5 pt-8 lg:pt-0 cursor-pointer text-xl">
+          <a href="/contact">Contact</a>
+        </li>
+      </ul>
+    </MenuItems>
+  </Astronav>
+</header>
